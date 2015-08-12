@@ -1,25 +1,16 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-    </style>
-    <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
+
+    <style name="MyBarTheme" parent="Base.Theme">
     </style>
 
-    <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#FFB7A2</item>
-        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorPrimaryDark">#FA5858</item>
         <item name="colorAccent">#FFB7A2</item>
         <item name="android:windowBackground">@color/window_background</item>
     </style>
-    <style name="Widget.CardContent" parent="android:Widget">
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">24dp</item>
-        <item name="android:orientation">vertical</item>
-    </style>
+
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabMaxWidth">@dimen/tab_max_width</item>
         <item name="tabIndicatorColor">#FA5858</item>
@@ -31,6 +22,6 @@
     </style>
 
     <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="textAllCaps">false</item>
+        <item name="textAllCaps">false</item> <!--如果要放圖在Tab-->
     </style>
 </resources>

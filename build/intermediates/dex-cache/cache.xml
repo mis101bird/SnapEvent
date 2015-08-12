@@ -2,11 +2,67 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-43687a1a3c0b27d030a337778c4b2fd905b57b6d.jar" />
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-59cad2bd4e89fc1643583c5c2a6deef3a4917243.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-c58278f0481333ce854973f9a8d4cbc9d0ed7175.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-6d8eafaf056821395f9ad98ba38f50d0f7b2cdde.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-a3dde9fea591584938a95a9f92959d98fc608145.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-a309252cedaffb5ad306fc861588ab5755ae0dc2.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-da7d1f0d634db36ed1738bd793bdc854c17cae81.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-f996e6442b31a222cd8169a09018f747457835ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-7a4b9d2ab89037a3d6c420f013c80919a0657377.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-0786d9c8f0d227523141f61ce9b5e7b733a811cf.jar" />
     </item>
     <item
         jar="C:\Users\ser\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"
@@ -16,6 +72,41 @@
         <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\glide-3.6.0-f7cde0a6ce5570c21ab6253074c121d76cc124e1.jar" />
     </item>
     <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-ffb9e10c0c2669e9206aecf4cd45a7d3f9887ade.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-1dc34155079f924dbd66ccec0d7cd98669983a54.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-43687a1a3c0b27d030a337778c4b2fd905b57b6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-b9263d29606affbea6499afc875df7b070348d1f.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-f59b3e792400df725128a4934f6a7102754bd84b.jar" />
+    </item>
+    <item
         jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -23,11 +114,109 @@
         <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-2439edb08fa78e2899fc2c34ba150fbd7e1a3cb6.jar" />
     </item>
     <item
-        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-a3dde9fea591584938a95a9f92959d98fc608145.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-2600074a8589e24a413e3a4c192dcea975458433.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-b9eef08ccce948f3efc9b48eec3cd3cca024d516.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-d373035e5f0b77510c03d715f8170179ce05740c.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-62c9b0ca56c7e381fa7fe2a8990a29cde81620d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-80a027b7b1a8d582cbdbfaf44756da913e917f6b.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-61e28d84b783564e4b91da83d0adc58d1cb133bd.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-b0e94664bccd8960652846f63da25d9b79115b1d.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-89d40f404641eba36110196b7a1d2803658ba4e9.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-831cd331811539001d8a5476d77d78f07f8e54f2.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-b2ba3e854edbcb0aa47df696037bfc3e56e40faf.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-9e578ee8f6ef588c67425bc89b129937a171858d.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-dfac6ca3fd1cffef26643079474cea4f9c1ffc84.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-e8cb278100a6cfd26e9e79a8320a17da391315de.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-ced89cf35f4bb064af0ea9f42b798bffdc0d1208.jar" />
+    </item>
+    <item
+        jar="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="C:\Users\ser\Documents\GitHub\SnapEvent\app\build\intermediates\pre-dexed\debug\classes-9216d01e90c00524e7d0aa0b5c22f83ad2e98d99.jar" />
     </item>
 
 </items>
