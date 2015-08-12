@@ -22,16 +22,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Toolbar Title"
+                android:text="SnapEvent"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title"
-                android:textSize="14dp" />
+                android:textSize="16dp"
+                android:textColor="#ffffff" />
             </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/MyCustomTabLayout"
             android:background="@color/window_background"/>
 
     </android.support.design.widget.AppBarLayout>
