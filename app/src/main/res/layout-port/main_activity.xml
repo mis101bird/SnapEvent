@@ -4,7 +4,38 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <include layout="@layout/top_section"/>
+    <!--Use App MaterialTabs to customize the tab's appearance-->
+    <io.karim.MaterialTabs
+        android:id="@+id/material_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/window_background"
+        app:mtIndicatorColor="#ffd01715"
+        app:mtUnderlineColor="#ffd01715"
+        app:mtUnderlineHeight="2dp"
+        app:mtIndicatorHeight="4dp"
+        app:mtTabPaddingLeftRight="9dp"
+        app:mtSameWeightTabs="true"
+        app:mtTextAllCaps="true"
+        app:mtPaddingMiddle="false"
+        app:mtTextColorSelected="#ff000000"
+        android:textColor="#ff000000"
+        app:mtTextUnselectedStyle="normal"
+        app:mtTextSelectedStyle="bold"
+        app:mtMrlRippleColor="#ffffffff"
+        app:mtMrlRippleHighlightColor="#40d01715"
+        app:mtMrlRippleDiameter="20.0dp"
+        app:mtMrlRippleOverlay="true"
+        app:mtMrlRippleAlpha="0.25"
+        app:mtMrlRippleDuration="750"
+        app:mtMrlRippleFadeDuration="100"
+        app:mtMrlRippleDelayClick="false"
+        app:mtMrlRipplePersistent="true"
+        app:mtMrlRippleInAdapter="false"
+        app:mtMrlRippleRoundedCorners="0dp"
+        />
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

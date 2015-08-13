@@ -11,6 +11,8 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Adapter;
 
+import io.karim.MaterialTabs;
+
 /**
  * Created by hsuan-ju on 2015/8/10.
  */
@@ -32,16 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
       ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         if (viewPager != null) {
-            setupViewPager(viewPager);
+           viewPager.setAdapter(new SampleFragmentPageAdapter(getSupportFragmentManager(),MainActivity.this));
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        MaterialTabs tabs = (MaterialTabs) findViewById(R.id.material_tabs); // Use materialTabs
+        tabs.setViewPager(viewPager);
     }
-    private void setupViewPager(ViewPager viewPager) {
 
-      //  adapter.addFragment(new CheeseListFragment(), "Category 1");
-
-      //  viewPager.setAdapter(adapter);
-    }
 }
