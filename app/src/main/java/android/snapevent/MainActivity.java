@@ -2,6 +2,9 @@ package android.snapevent;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.snapevent.app.AppController;
+import android.snapevent.app.AppRemoteConfig;
+import android.snapevent.volleyResponse.KKTIXresponseHandler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +15,9 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Adapter;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +25,9 @@ import java.util.List;
  * Created by hsuan-ju on 2015/8/10.
  */
 public class MainActivity extends AppCompatActivity {
+
+    AppController controller=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        //test Volley
+       /* AppController.getInstance().GetStringRequestToEventBean(AppRemoteConfig.getInstance().getKKTIX_ALL_url(),
+                new KKTIXresponseHandler(),
+                VolleyTAG.KKTIX_ALL.getTAG(),
+                MainActivity.this);*/
+
     }
 
 }
