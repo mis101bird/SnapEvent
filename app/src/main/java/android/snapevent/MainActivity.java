@@ -1,22 +1,21 @@
 package android.snapevent;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.snapevent.app.AppController;
 import android.snapevent.app.AppRemoteConfig;
-import android.snapevent.volleyResponse.KKTIXresponseHandler;
+import android.snapevent.bean.xmlBeanList;
+import android.snapevent.volleyResponse.SimpleXmlRequest;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.TabLayout;
-import android.view.View;
-import android.widget.Adapter;
+import android.util.Log;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +53,32 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         //test Volley
-       /* AppController.getInstance().GetStringRequestToEventBean(AppRemoteConfig.getInstance().getKKTIX_ALL_url(),
+        /*AppController.getInstance().GetStringRequestToEventBean(AppRemoteConfig.getInstance().getKKTIX_ALL_url(),
                 new KKTIXresponseHandler(),
                 VolleyTAG.KKTIX_ALL.getTAG(),
-                MainActivity.this);*/
+                MainActivity.this);
+        */
+        SimpleXmlRequest<xmlBeanList> simpleRequest = new SimpleXmlRequest<xmlBeanList>(Request.Method.GET, AppRemoteConfig.getInstance().getKKTIX_ALL_url(), xmlBeanList.class,
+                new Response.Listener<xmlBeanList>()
+                {
+                    @Override
+                    public void onResponse(xmlBeanList response) {
+                        List<xmlBeanList.xmlEventBean> datas=response.getMatches();
+                        for(xmlBeanList.xmlEventBean bean : datas){
+                            Log.i("success","title: "+bean.getTitle());
+                        }
 
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.i("error",error.getMessage());
+                    }
+                }
+        );
+        AppController.getInstance().addToRequestQueue(simpleRequest, VolleyTAG.KKTIX_ALL.getTAG());
     }
 
 }

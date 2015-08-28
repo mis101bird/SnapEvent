@@ -2,7 +2,6 @@ package android.snapevent.app;
 
 import android.app.Application;
 import android.content.Context;
-import android.snapevent.EventBean;
 import android.snapevent.volleyResponse.VolleyResponseHandler;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,16 +11,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /**
  * Created by hsuan-ju on 2015/8/26.
  */
 public class AppController extends Application{
     public static final String TAG = AppController.class.getSimpleName();
-
-    public HashMap<String,EventBean> events=new HashMap<>();
 
     private RequestQueue eventRequestQueue;
 
@@ -38,6 +32,7 @@ public class AppController extends Application{
     }
 
     public RequestQueue getRequestQueue() {
+        Log.i("requestQueue", "Into GET requestQueue");
         if (eventRequestQueue == null) {
             eventRequestQueue = Volley.newRequestQueue(getApplicationContext());
         }
@@ -49,8 +44,7 @@ public class AppController extends Application{
 
         getRequestQueue().cancelAll(TAG);//cancel forword request first.
         StringRequest sr=new StringRequest(Request.Method.GET,url,handler.getSuccessResponse(),handler.getErrorResponse());
-        sr.setTag(TAG);
-        getRequestQueue().add(sr);
+        addToRequestQueue(sr, TAG);
     }
 
     public <T> void addToRequestQueue(Request<T> req, String tag) {
@@ -71,15 +65,6 @@ public class AppController extends Application{
             eventRequestQueue.cancelAll(tag);
         }
     }
-    public void storeEvent(String TAG,EventBean e){
-        Log.i("storeEvent","tag mame: "+TAG);
-        events.put(TAG,e);
 
-    }
-    public EventBean getEvent(String TAG){
-        Log.i("getEvent","tag mame: "+TAG);
-        return events.get(TAG);
-
-    }
 
 }

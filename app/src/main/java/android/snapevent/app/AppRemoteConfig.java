@@ -15,7 +15,7 @@ public class AppRemoteConfig {
     //keyword parameter use the same day
     //public static String GOV_Exhibit_url = "http://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&keyword=";
 
-    public String KKTIX_ALL_url="https://kktix.com/events.atom?end_at="+getTimeForKKTIX()+"&locale=zh-TW&search=現場&start_at="+getTimeForKKTIX();
+    public String KKTIX_ALL_url="https://kktix.com/events.atom?end_at="+getTimeForKKTIX()+"&locale=zh-TW&start_at="+getTimeForKKTIX();
 
     public static AppRemoteConfig getInstance(){
         if(config==null){
