@@ -24,59 +24,6 @@ public class xmlBeanList {
             return beans;
         }
 
-    @Root(name="entry",strict = false)
-    public static class xmlEventBean {
-
-        @Element(name = "title", required = true)
-        private String title;
-
-        @Element(name="link",required = true)
-        public class Link{
-            @Attribute(name="href",required = true)
-            private String url;
-        }
-        @Element(name = "summary", required = false)
-        private String summary;
-
-        @Element(name = "content", required = true)
-        private String timeANDplace;
-
-        @Element(name = "author", required = false)
-        public class Author{
-            @Element(name="name",required = true)
-            private String name;
-            @Element(name="url",required = false)
-            private String url;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-
-        public String getSummary() {
-            return summary;
-        }
-
-        public void setSummary(String summary) {
-            this.summary = summary;
-        }
-
-        public String getTimeANDplace() {
-            return timeANDplace;
-        }
-
-        public void setTimeANDplace(String timeANDplace) {
-            this.timeANDplace = timeANDplace;
-        }
-
-
-
-    }
-
 }
+
 

@@ -1,5 +1,6 @@
 package android.snapevent;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.snapevent.app.AppController;
 import android.snapevent.app.AppRemoteConfig;
@@ -58,27 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 VolleyTAG.KKTIX_ALL.getTAG(),
                 MainActivity.this);
         */
-        SimpleXmlRequest<xmlBeanList> simpleRequest = new SimpleXmlRequest<xmlBeanList>(Request.Method.GET, AppRemoteConfig.getInstance().getKKTIX_ALL_url(), xmlBeanList.class,
-                new Response.Listener<xmlBeanList>()
-                {
-                    @Override
-                    public void onResponse(xmlBeanList response) {
-                        List<xmlBeanList.xmlEventBean> datas=response.getMatches();
-                        for(xmlBeanList.xmlEventBean bean : datas){
-                            Log.i("success","title: "+bean.getTitle());
-                        }
-
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.i("error",error.getMessage());
-                    }
-                }
-        );
-        AppController.getInstance().addToRequestQueue(simpleRequest, VolleyTAG.KKTIX_ALL.getTAG());
+        AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this);
     }
 
 }
