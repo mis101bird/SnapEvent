@@ -53,12 +53,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        //test Volley
-        /*AppController.getInstance().GetStringRequestToEventBean(AppRemoteConfig.getInstance().getKKTIX_ALL_url(),
-                new KKTIXresponseHandler(),
-                VolleyTAG.KKTIX_ALL.getTAG(),
-                MainActivity.this);
-        */
         AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this);
     }
 

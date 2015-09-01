@@ -81,7 +81,7 @@ public class SimpleXmlRequest<T> extends Request<T> {
 
             //String data = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
             Log.i("SimpleXML","here");
-            String data = new String(response.data,"UTF-8");
+            String data = new String(response.data,"UTF-8"); //Use utf-8
             return Response.success(serializer.read(clazz, data, false),
                     HttpHeaderParser.parseCacheHeaders(response));
         }
