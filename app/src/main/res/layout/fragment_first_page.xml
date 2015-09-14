@@ -20,4 +20,13 @@
              />
     </ScrollView>
 
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="輸入您的所在地點..."
+        android:id="@+id/autocomplete_places"
+        android:layout_marginTop="30dp"
+        android:autoText="true"
+        android:background="@android:drawable/editbox_background_normal" />
+
 </FrameLayout>
