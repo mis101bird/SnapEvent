@@ -2,10 +2,15 @@ package android.snapevent.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.snapevent.FirstLoadingActivity;
+import android.snapevent.MainActivity;
 import android.snapevent.VolleyTAG;
 import android.snapevent.bean.xmlBeanList;
 import android.snapevent.bean.xmlEventBean;
+import android.snapevent.volleyResponse.ErrorListenerAndContext;
+import android.snapevent.volleyResponse.ListenerAndContext;
 import android.snapevent.volleyResponse.SimpleXmlRequest;
 import android.text.TextUtils;
 import android.util.Log;
@@ -17,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -24,11 +30,10 @@ import java.util.List;
  */
 public class AppController extends Application{
     public static final String TAG = AppController.class.getSimpleName();
-
     private RequestQueue eventRequestQueue;
-
     private static AppController mInstance;
 
+    private static HashMap<String,List> eventbeans=new HashMap<>();
     @Override
     public void onCreate() {
         super.onCreate();
@@ -55,19 +60,22 @@ public class AppController extends Application{
         if(ifInternetOpen(context)) {
 
             SimpleXmlRequest<xmlBeanList> simpleRequest = new SimpleXmlRequest<xmlBeanList>(Request.Method.GET, AppRemoteConfig.getInstance().getKKTIX_ALL_url(), xmlBeanList.class,
-                    new Response.Listener<xmlBeanList>() {
+                    new ListenerAndContext<xmlBeanList>(context) {
+
                         @Override
                         public void onResponse(xmlBeanList response) {
                             List<xmlEventBean> datas = response.getMatches();
-                            for (xmlEventBean bean : datas) {
-                                Log.i("success", "title: " + bean.getTitle() + " and " + bean.getAuthor().getName());
-                            }
+                            eventbeans.put("KKTIX", datas);
+                                Log.i("success", "title: " + datas.get(0).getTitle() + " and " + datas.get(0).getAuthor().getName());
+                            Intent toMain=new Intent(this.getCurrendActivity() , MainActivity.class);
+                            this.getCurrendActivity().startActivity(toMain);
 
                         }
                     },
-                    new Response.ErrorListener() {
+                    new ErrorListenerAndContext(context) {
                         @Override
                         public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(this.getCurrendActivity(),"發生錯誤，請重開App",Toast.LENGTH_LONG).show();
                             Log.i("error", error.getMessage());
                         }
                     }
@@ -109,7 +117,7 @@ public class AppController extends Application{
             return true;
         }
         else{
-            Toast.makeText(context, "請開起網路連線" , Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "請開起手機網路才能使用本App" , Toast.LENGTH_LONG).show();
             return false;
         }
 

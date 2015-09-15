@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SnapEvent</string>
     <string name="title_activity_maps">Map</string>
+    <string name="map_key">AIzaSyBfbbADYUm5O_3oI3moDlfUu2OyicFIXFY</string>
 </resources>
