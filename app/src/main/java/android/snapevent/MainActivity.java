@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        //AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this);
+        AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this);
     }
 
 }

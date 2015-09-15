@@ -38,7 +38,7 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
     private AutoCompleteTextView mAutocompleteView;
 
     private static final LatLngBounds BOUNDS_GREATER_SYDNEY = new LatLngBounds(
-            new LatLng(21.715956, 119.419628),new LatLng(25.371160, 122.138744));
+            new LatLng(21.715956, 119.419628),new LatLng(25.371160, 122.138744)); //Taiwan scope
 
     public FirstPage() {
         // Required empty public constructor
@@ -50,22 +50,7 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
         mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                 .enableAutoManage(getActivity(), 0 /* clientId */, this)
                 .addApi(Places.GEO_DATA_API)
-                .build();
-
-        // Retrieve the AutoCompleteTextView that will display Place suggestions.
-        //mAutocompleteView = (AutoCompleteTextView)
-            //    getView().findViewById(R.id.autocomplete_places);
-
-        // Register a listener that receives callbacks when a suggestion has been selected
-       // mAutocompleteView.setOnItemClickListener(mAutocompleteClickListener);
-
-
-        // Set up the adapter that will retrieve suggestions from the Places Geo Data API that cover
-        // the entire world.
-        /*mAdapter = new PlaceAutocompleteAdapter(getActivity(), android.R.layout.simple_list_item_1,
-                mGoogleApiClient, BOUNDS_GREATER_SYDNEY, null);
-        mAutocompleteView.setAdapter(mAdapter);*/
-
+                .build(); //set google map client init
     }
 
     private AdapterView.OnItemClickListener mAutocompleteClickListener
@@ -88,11 +73,6 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
             PendingResult<PlaceBuffer> placeResult = Places.GeoDataApi
                     .getPlaceById(mGoogleApiClient, placeId);
             placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
-
-            /*Toast.makeText(getActivity(), "Clicked: " + item.description,
-                    Toast.LENGTH_SHORT).show();*/
-
-
             Log.i("Input place", "Called getPlaceById to get Place details for " + item.placeId);
         }
     };
@@ -110,28 +90,14 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
             final Place place = places.get(0);
 
             // Format details of the place for display and show it in a TextView.
-            //Toast.makeText(getActivity(),place.getName(),Toast.LENGTH_LONG).show();
+
             Intent info = new Intent( getActivity() , MapsActivity.class);
             info.putExtra("latitude", place.getLatLng().latitude);
             info.putExtra("longitude",place.getLatLng().longitude);
             info.putExtra("name",place.getName());
             Log.i("place",place.getLatLng().toString());
             getActivity().startActivity(info);
-            /*mPlaceDetailsText.setText(formatPlaceDetails(getResources(), place.getName(),
-                    place.getId(), place.getAddress(), place.getPhoneNumber(),
-                    place.getWebsiteUri()));
-             */
-            // Display the third party attributions if set.
-            /*final CharSequence thirdPartyAttribution = places.getAttributions();
-            if (thirdPartyAttribution == null) {
-                mPlaceDetailsAttribution.setVisibility(View.GONE);
-            } else {
-                mPlaceDetailsAttribution.setVisibility(View.VISIBLE);
-                mPlaceDetailsAttribution.setText(Html.fromHtml(thirdPartyAttribution.toString()));
-            }
 
-            Log.i(TAG, "Place details received: " + place.getName());
-*/
             places.release();
         }
     };

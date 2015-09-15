@@ -35,7 +35,7 @@ public class MapsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         final ActionBar ab = getSupportActionBar();
         ab.setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true); //BACK botton which just available on Android 5.0, and have to set parentActivity.
 
     }
 
@@ -50,7 +50,6 @@ public class MapsActivity extends AppCompatActivity {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-
             mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
                     .getMap();
             // Check if we were successful in obtaining the map.
@@ -61,19 +60,14 @@ public class MapsActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * This is where we can add markers or lines, add listeners or move the camera. In this case, we
-     * just add a marker near Africa.
-     * <p/>
-     * This should only be called once and when we are sure that {@link #mMap} is not null.
-     */
-    private void setUpMap(LatLng place,String name) {
-        //LatLng place=getLocationFromAddress(strAddress);
-        mMap.addMarker(new MarkerOptions().position(place).title(name));
+
+    private void setUpMap(final LatLng place,String name) {
+
+        mMap.addMarker(new MarkerOptions().position(place).title(name)).showInfoWindow();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place, 15.0f));
 
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(13f);
-        mMap.animateCamera(zoom, 2000, new GoogleMap.CancelableCallback() {
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(13f); //zoom number
+        mMap.animateCamera(zoom, 3000, new GoogleMap.CancelableCallback() { //animate velocity
             @Override
             public void onFinish() {
 

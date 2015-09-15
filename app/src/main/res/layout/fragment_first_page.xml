@@ -20,13 +20,29 @@
              />
     </ScrollView>
 
-    <AutoCompleteTextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="輸入您的所在地點..."
-        android:id="@+id/autocomplete_places"
-        android:layout_marginTop="30dp"
-        android:autoText="true"
-        android:background="@android:drawable/editbox_background_normal" />
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/imageView2"
+            android:background="@android:drawable/ic_menu_search" />
+
+        <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="輸入您的所在地點..."
+            android:id="@+id/autocomplete_places"
+            android:layout_marginTop="30dp"
+            android:autoText="true"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_weight="0.78" />
+    </LinearLayout>
 
 </FrameLayout>
