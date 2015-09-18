@@ -38,26 +38,29 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
+        android:id="@+id/show_mark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:background="@android:drawable/picture_frame"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/show_mark_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="New Text"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="#FFA07A"/>
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/show_mark_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="New Text2"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
     </LinearLayout>
 
 </FrameLayout>

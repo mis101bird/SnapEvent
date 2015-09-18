@@ -43,7 +43,9 @@ public class AppController extends Application {
         super.onCreate();
         mInstance = this;
     }
-
+    public HashMap<String,List> getEventbeans(){
+        return eventbeans;
+    }
     public static synchronized AppController getInstance() {
         return mInstance;
     }
