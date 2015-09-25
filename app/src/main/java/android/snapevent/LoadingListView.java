@@ -50,7 +50,7 @@ public class LoadingListView extends ListView implements AbsListView.OnScrollLis
 
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-        Log.i("onScrollStateChanged","endVisibleItem: "+endVisibleItem+"and totalItemCount: "+totalItemCount);
+
       if(endVisibleItem==totalItemCount && scrollState==OnScrollListener.SCROLL_STATE_IDLE){
           if(!loading){
               loading=true;
