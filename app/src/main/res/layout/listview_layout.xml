@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/abc_menu_hardkey_panel_mtrl_mult">
+
+    <ImageView
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/kktix_img"
+        android:layout_weight="1"
+        android:layout_margin="0dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="104dp"
+        android:gravity="center_horizontal|right"
+        android:layout_weight="14">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="載入中..."
+            android:id="@+id/textView"
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            android:layout_marginTop="2dip"
+            android:layout_marginBottom="2dip"
+            android:textColor="#ec7c7f" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="載入中..."
+            android:id="@+id/textView2"
+            android:layout_gravity="right"
+            android:textSize="13dp" />
+    </LinearLayout>
+</LinearLayout>

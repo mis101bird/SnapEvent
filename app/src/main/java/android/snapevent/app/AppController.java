@@ -35,7 +35,6 @@ public class AppController extends Application {
     public static final String TAG = AppController.class.getSimpleName();
     private RequestQueue eventRequestQueue;
     private static AppController mInstance;
-
     private static HashMap<String, List> eventbeans = new HashMap<>();
 
     @Override
@@ -80,7 +79,7 @@ public class AppController extends Application {
                     new ErrorListenerAndContext(context) {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(this.getCurrendActivity(), "發生錯誤，請重開App", Toast.LENGTH_LONG).show();
+                            Toast.makeText(this.getCurrendActivity(), "請檢察wifi認證或請重開App", Toast.LENGTH_LONG).show();
                             Log.i("error", error.getMessage());
                         }
                     }

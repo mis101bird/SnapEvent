@@ -4,10 +4,10 @@
     android:background="@drawable/otherback">
 
 
-    <ListView
+    <android.snapevent.LoadingListView
         android:layout_width="match_parent"
-        android:layout_height="516dp"
+        android:layout_height="fill_parent"
         android:id="@+id/listView"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="center_horizontal|top" />
 
 </FrameLayout>

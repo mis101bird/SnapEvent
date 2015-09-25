@@ -140,6 +140,7 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
         Toast.makeText(getActivity(),
                 "Could not connect to Google API Client: Error " + connectionResult.getErrorCode(),
                 Toast.LENGTH_SHORT).show();
+
     }
 
 }
