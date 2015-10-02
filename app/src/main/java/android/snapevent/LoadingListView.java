@@ -6,18 +6,26 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by hsuan-ju on 2015/9/24.
  */
-public class LoadingListView extends ListView implements AbsListView.OnScrollListener{
+public class LoadingListView extends ListView implements AbsListView.OnScrollListener {
 
     View foot;
     boolean loading=false;
     int totalItemCount=0;
     int endVisibleItem=0;
     InLoad load;
+    HashMap<String,List> afterFilter;
+
     public LoadingListView(Context context) {
         super(context);
         initView(context);
@@ -40,13 +48,15 @@ public class LoadingListView extends ListView implements AbsListView.OnScrollLis
 
     /**
      * Loading the foot layout part.
-     * @param context
+     * @param context Activity item
      */
     private void initView(Context context){
         LayoutInflater layout = LayoutInflater.from(context);
         foot = layout.inflate(R.layout.listview_foot,null);
         this.addFooterView(foot);
     }
+
+
 
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {

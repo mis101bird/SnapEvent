@@ -29,7 +29,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import java.util.List;
 
 
-public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionFailedListener{
+public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
 
     protected GoogleApiClient mGoogleApiClient;
 
@@ -38,7 +38,7 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
     private AutoCompleteTextView mAutocompleteView;
 
     private static final LatLngBounds BOUNDS_GREATER_SYDNEY = new LatLngBounds(
-            new LatLng(21.715956, 119.419628),new LatLng(25.371160, 122.138744)); //Taiwan scope
+            new LatLng(21.715956, 119.419628), new LatLng(25.371160, 122.138744)); //Taiwan scope
 
     public FirstPage() {
         // Required empty public constructor
@@ -91,11 +91,11 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
 
             // Format details of the place for display and show it in a TextView.
 
-            Intent info = new Intent( getActivity() , MapsActivity.class);
+            Intent info = new Intent(getActivity(), MapsActivity.class);
             info.putExtra("latitude", place.getLatLng().latitude);
-            info.putExtra("longitude",place.getLatLng().longitude);
-            info.putExtra("name",place.getName());
-            Log.i("place",place.getLatLng().toString());
+            info.putExtra("longitude", place.getLatLng().longitude);
+            info.putExtra("name", place.getName());
+            Log.i("place", place.getLatLng().toString());
             getActivity().startActivity(info);
 
             places.release();
@@ -106,7 +106,9 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_page, container, false);
+        View v= inflater.inflate(R.layout.fragment_first_page, container, false);
+        return v;
+
     }
 
     @Override
@@ -130,6 +132,7 @@ public class FirstPage extends Fragment implements GoogleApiClient.OnConnectionF
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
+
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 

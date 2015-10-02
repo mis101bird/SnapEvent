@@ -84,7 +84,7 @@ public class AppController extends Application {
                         }
                     }
             );
-            AppController.getInstance().addToRequestQueue(simpleRequest, VolleyTAG.KKTIX_ALL.getTAG());
+            AppController.getInstance().addToRequestQueue(simpleRequest,VolleyTAG.KKTIX_ALL.getTAG());
         } else {
             Log.i("Internet Error", "user phone didn't open internet.");
         }

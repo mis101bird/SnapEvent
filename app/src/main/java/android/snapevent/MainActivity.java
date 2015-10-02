@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this);
+        AppController.getInstance().GetKKTIXRequestToEventBean(MainActivity.this); //Loading online events data
     }
 
 }
