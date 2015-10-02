@@ -94,6 +94,7 @@ public class ListPage extends Fragment implements LoadingListView.InLoad {
 
             @Override
             public void afterTextChanged(Editable arg0) {
+                listView.setOnItemClickListener(new EventItemListener(filterlist, getActivity()));
             }
         });
         return view;
@@ -149,6 +150,7 @@ public class ListPage extends Fragment implements LoadingListView.InLoad {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             listView.setAdapter(adapter); //Add adapter to listView
+            listView.setOnItemClickListener(new EventItemListener(datalist, getActivity()));
 
         }
     }

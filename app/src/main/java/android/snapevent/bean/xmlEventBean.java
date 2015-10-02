@@ -12,10 +12,8 @@ public class xmlEventBean {
     private String title;
 
     @Element(name="link",required = true)
-    public class Link{
-        @Attribute(name="href",required = true)
-        private String url;
-    }
+    private Link link;
+
     @Element(name = "summary", required = false)
     private String summary;
 
@@ -49,7 +47,12 @@ public class xmlEventBean {
         this.timeANDplace = timeANDplace;
     }
 
+    public Link getLink() {
+        return link;
+    }
+
     public Author getAuthor() {
         return author;
     }
+
 }
