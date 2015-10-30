@@ -1,5 +1,6 @@
 package android.snapevent;
 
+import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
@@ -42,6 +43,7 @@ public class MapsActivity extends AppCompatActivity {
     TextView infotitle;
     TextView infodes;
     Marker preClicked=null;
+    Context context=this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,39 +104,7 @@ public class MapsActivity extends AppCompatActivity {
 
             }
         });
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-
-            @Override
-            public boolean onMarkerClick(Marker arg0) {
-
-                if(markers !=null){
-                    for (MarkerItem it : markers) {
-                        if (arg0.getTitle().equals(it.getAddress())) {
-
-                            if(preClicked!=null){
-                                preClicked.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.direction_down));
-                            }
-                            Log.i("clickedIcon",it.getAddress());
-                            arg0.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.direction_down2));
-                            if (markinfo.getVisibility()== View.GONE) {
-                                markinfo.setVisibility(View.VISIBLE);
-                            }
-                            infotitle.setText(it.getBean().getTitle());
-                            infodes.setText(it.getBean().getTimeANDplace());
-                            preClicked=arg0;
-                        }
-                    }
-                    return true;
-                }else{
-
-                    return false;
-                }
-
-
-            }
-
-
-        });
+        mMap.setOnMarkerClickListener(new MapOnMarkerClickListener(this));
     }
 
     public List<MarkerItem> getEventAddress() {
@@ -215,7 +185,7 @@ public class MapsActivity extends AppCompatActivity {
         }
     }
 
-    class MarkerItem {
+    public class MarkerItem {
         private xmlEventBean bean = null;
         private String address = null;
         private Address placeItem = null;
@@ -242,5 +212,42 @@ public class MapsActivity extends AppCompatActivity {
             this.placeItem = placeItem;
         }
     }
+    public class MapOnMarkerClickListener implements GoogleMap.OnMarkerClickListener{
+        Context activity;
+        public MapOnMarkerClickListener(Context activity) {
+            this.activity=activity;
+        }
 
+        @Override
+            public boolean onMarkerClick(Marker arg0) {
+
+                if(markers !=null){
+                    for (MarkerItem it : markers) {
+                        if (arg0.getTitle().equals(it.getAddress())) {
+
+                            if(preClicked!=null){
+                                preClicked.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.direction_down));
+                            }
+                            Log.i("clickedIcon",it.getAddress());
+                            arg0.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.direction_down2));
+                            if (markinfo.getVisibility()== View.GONE) {
+                                markinfo.setVisibility(View.VISIBLE);
+                            }
+                            infotitle.setText(it.getBean().getTitle());
+                            infotitle.setOnClickListener(new MapLogOnClickListener(it,activity));
+                            infodes.setText(it.getBean().getTimeANDplace());
+                            preClicked=arg0;
+                        }
+                    }
+                    return true;
+                }else{
+
+                    return false;
+                }
+
+
+            }
+
+
+        }
 }
